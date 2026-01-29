@@ -1,0 +1,15 @@
+# Local Vector Store
+vectorstore/
+db_faiss/
+
+# Python environment
+venv/
+.env
+__pycache__/
+*.py[cod]
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# OS files
+.DS_Store
