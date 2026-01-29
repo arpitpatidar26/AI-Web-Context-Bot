@@ -42,7 +42,7 @@ def create_vector_store(splits):
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     
     # BATCH PROCESSING
-    batch_size = 5
+    batch_size = 20
     vectorstore = None
     print(f"Processing {len(splits)} chunks...")
 
@@ -52,8 +52,8 @@ def create_vector_store(splits):
             vectorstore = FAISS.from_documents(batch, embedding=embeddings)
         else:
             vectorstore.add_documents(batch)
-        print(f"Batch {i} done. Sleeping 2s...")
-        time.sleep(2)
+        # print(f"Batch {i} done. Sleeping 2s...")
+        # time.sleep(2)
     
     vectorstore.save_local(DB_FAISS_PATH)
     return vectorstore
