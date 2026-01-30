@@ -26,6 +26,7 @@ The system follows a standard RAG pipeline:
 ## 🛠️ Frameworks & Tools
 
 - Framework: LangChain was used for its robust ecosystem in managing document loaders, prompt templates, and chain orchestration.
+-  Streamlit: Provides the interactive web-based user interface for URL input and real-time chat.
 
 - LLM Model: Llama-3.3-70b-versatile (via Groq). It offers state-of-the-art reasoning capabilities with exceptionally low latency via Groq's LPUs, making the chatbot feel responsive in real-time.
 
@@ -37,6 +38,7 @@ The system follows a standard RAG pipeline:
 - Prerequisites
 
   - Python 3.9+
+  - A Groq API Key (obtainable from Groq Cloud)
 
 - Clone the project
 
